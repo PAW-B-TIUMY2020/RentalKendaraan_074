@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <h2>Tambah Data Peminjaman</h2>
 
@@ -49,9 +50,9 @@
                 @Html.DisplayFor(modelItem => item.IdKendaraanNavigation.IdKendaraan)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdPeminjaman">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdPeminjaman">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdPeminjaman">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdPeminjaman"><i class="fa fa-pencil" style="color:steelblue"></i></a> |
+                <a asp-action="Details" asp-route-id="@item.IdPeminjaman"><i class="fa fa-server" style="color:steelblue"></i></a> |
+                <a asp-action="Delete" asp-route-id="@item.IdPeminjaman"><i class="fa fa-trash" style="color:red"></i></a>
             </td>
         </tr>
 }
