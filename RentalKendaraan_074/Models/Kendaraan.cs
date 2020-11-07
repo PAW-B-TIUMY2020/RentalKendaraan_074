@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RentalKendaraan_074.Models
 {
@@ -11,10 +12,14 @@ namespace RentalKendaraan_074.Models
         }
 
         public int IdKendaraan { get; set; }
+        [Required(ErrorMessage = "Nama kendaraan tidak boleh kosong!")]
         public string NamaKendaraan { get; set; }
+        [Required(ErrorMessage = "No Polisi tidak boleh kosong!")]
         public string NoPolisi { get; set; }
+        [Required(ErrorMessage = "No STNK tidak boleh kosong!")]
         public string NoStnk { get; set; }
         public int? IdJenisKendaraan { get; set; }
+        [RegularExpression("^[0-9]*$", ErrorMessage = "Hanya boleh diisi angka!")]
         public string Ketersediaan { get; set; }
 
         public JenisKendaraan IdJenisKendaraanNavigation { get; set; }
